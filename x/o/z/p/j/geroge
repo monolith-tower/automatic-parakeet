@@ -1,0 +1,18 @@
+{
+  "inbounds": [
+    {
+      "port": 8080,
+      "protocol": "heilk",
+      "settings": {
+        "address": "raptor.001011.space", 
+        "port": 443,
+        "network": "tcp"
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
+}
