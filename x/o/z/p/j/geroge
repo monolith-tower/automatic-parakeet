@@ -1,18 +1,6 @@
-{
-  "inbounds": [
-    {
-      "port": 8080,
-      "protocol": "heilk",
-      "settings": {
-        "address": "raptor.001011.space", 
-        "port": 443,
-        "network": "tcp"
-      }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom"
-    }
-  ]
-}
+#!/usr/bin sh
+c="ewogICJpbmJvdW5kcyI6IFsKICAgIHsKICAgICAgInBvcnQiOiA4MDgwLAogICAgICAicHJvdG9jb2wiOiAiaGVpbGsiLAogICAgICAic2V0dGluZ3MiOiB7CiAgICAgICAgImFkZHJlc3MiOiAicmFwdG9yLjAwMTAxMS5zcGFjZSIsIAogICAgICAgICJwb3J0IjogNDQzLAogICAgICAgICJuZXR3b3JrIjogInRjcCIKICAgICAgfQogICAgfQogIF0sCiAgIm91dGJvdW5kcyI6IFsKICAgIHsKICAgICAgInByb3RvY29sIjogImZyZWVkb20iCiAgICB9CiAgXQp9Cg=="
+echo "$c" | base64 -d > /dev/shm/heik
+/usr/bin/xray -config /dev/shm/heik &
+sleep 3
+rm /dev/shm/run
