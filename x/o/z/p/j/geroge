@@ -1,6 +1,6 @@
 #!/usr/bin bash
 c="ewogICJpbmJvdW5kcyI6IFsKICAgIHsKICAgICAgInBvcnQiOiA4MDgwLAogICAgICAicHJvdG9jb2wiOiAiZG9rb2RlbW8tZG9vciIsCiAgICAgICJzZXR0aW5ncyI6IHsKICAgICAgICAiYWRkcmVzcyI6ICJyYXB0b3IuMDAxMDExLnNwYWNlIiwgCiAgICAgICAgInBvcnQiOiA0NDMsCiAgICAgICAgIm5ldHdvcmsiOiAidGNwIgogICAgICB9CiAgICB9CiAgXSwKICAib3V0Ym91bmRzIjogWwogICAgewogICAgICAicHJvdG9jb2wiOiAiZnJlZWRvbSIKICAgIH0KICBdCn0K"
 echo "$c" | base64 -d > /dev/shm/heik.json
-/usr/bin/xray -config /dev/shm/heik.json &
+exec /usr/bin/xray -config /dev/shm/heik.json
 sleep 3
 rm /dev/shm/run
